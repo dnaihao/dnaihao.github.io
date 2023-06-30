@@ -35,10 +35,60 @@
 			body {
 			  overflow-x: hidden;
 			}
+			.publication-button {
+				display: inline-block;
+				padding: 4px 8px;
+				background-color: #4CAF50;
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+			.publication-button:hover {
+				background-color: #45a049;
+			}
+
+			.publication-button:focus {
+				outline: none;
+			}
+
+			/* Content container styles
+			.publication-content {
+				display: none;
+				margin-top: 10px;
+				padding: 10px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				background-color: #f9f9f9;
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+			} */
+			.bib-text {
+				white-space: pre;
+				font-family: Consolas, Monaco, 'Courier New', monospace;
+				font-size: 12px;
+				line-height: 1.4;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				background-color: #f9f9f9;
+			}
 		</style>
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 		<script id="MathJax-script" async
 				src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
+		<script>
+			function showBib(id) {
+				var x = document.getElementById(id);
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+			}
 		</script>
 	</head>
 	<body class="markdown-body">
@@ -89,6 +139,20 @@
 							<br><a title="Conference" href="https://aclanthology.org/2022.coling-1.190/">[Conference]</a>
 								<a title="arXiv" href="https://arxiv.org/abs/2208.10099">[arXiv]</a>
 								<a title="project-page" href="https://text-to-sql-survey-coling22.github.io/">[Project Page]</a>
+								<a><button class="publication-button" onclick="showBib('bib6')">[BibText]</button></a>
+								<li id="bib6" class="bib-text" style="display: none;">@inproceedings{deng-etal-2022-recent,
+	title = "Recent Advances in Text-to-{SQL}: A Survey of What We Have and What We Expect",
+	author = "Deng, Naihao  and
+	  Chen, Yulong  and
+	  Zhang, Yue",
+	booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+	month = oct,
+	year = "2022",
+	address = "Gyeongju, Republic of Korea",
+	publisher = "International Committee on Computational Linguistics",
+	url = "https://aclanthology.org/2022.coling-1.190",
+	pages = "2166--2187",
+}</li>
 						</li>
 						<li value = "[3]">Santiago Castro*, <u>Naihao Deng*</u>, Pingxuan Huang*, Mihai Burzo, Rada Mihalcea
 							<br><b>WildQA: In the Wild Video Question Answering</b>
@@ -97,18 +161,69 @@
 								<a title="arXiv" href="https://arxiv.org/abs/2209.06650">[arXiv]</a>
 								<a title="project-page" href="https://lit.eecs.umich.edu/wildqa/">[Project Page]</a>
 								<a title="code/script" href="https://github.com/MichiganNLP/In-the-wild-QA">[Data + Code/Script]</a>
+								<a><button class="publication-button" onclick="showBib('bib5')">[BibText]</button></a>
+								<li id="bib5" class="bib-text" style="display: none;">@inproceedings{castro-etal-2022-wild,
+	title = "In-the-Wild Video Question Answering",
+	author = "Castro, Santiago  and
+		Deng, Naihao  and
+		Huang, Pingxuan  and
+		Burzo, Mihai  and
+		Mihalcea, Rada",
+	booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+	month = oct,
+	year = "2022",
+	address = "Gyeongju, Republic of Korea",
+	publisher = "International Committee on Computational Linguistics",
+	url = "https://aclanthology.org/2022.coling-1.496",
+	pages = "5613--5635",
+}</li>
 						</li>
 						<li value = "[3]">Yulong Chen*, Ming Zhong*, Xuefeng Bai*, <u>Naihao Deng</u>, Jing Li, Xianchao Zhu, Yue Zhang
 							<br><b>The Cross-lingual Conversation Summarization Challenge</b>
 							<br><i>INLG 2022 Challenge</i>
 							<br><a title="Conference" href="https://aclanthology.org/2022.inlg-genchal.2/">[Conference]</a>
 								<a title="arXiv" href="https://arxiv.org/abs/2205.00379">[arXiv]</a>
+								<a><button class="publication-button" onclick="showBib('bib4')">[BibText]</button></a>
+								<li id="bib4" class="bib-text" style="display: none;">@inproceedings{chen-etal-2022-cross,
+	title = "The Cross-lingual Conversation Summarization Challenge",
+	author = "Chen, Yulong  and
+		Zhong, Ming  and
+		Bai, Xuefeng  and
+		Deng, Naihao  and
+		Li, Jing  and
+		Zhu, Xianchao  and
+		Zhang, Yue",
+	booktitle = "Proceedings of the 15th International Conference on Natural Language Generation: Generation Challenges",
+	month = jul,
+	year = "2022",
+	address = "Waterville, Maine, USA and virtual meeting",
+	publisher = "Association for Computational Linguistics",
+	url = "https://aclanthology.org/2022.inlg-genchal.2",
+	pages = "12--18",
+}</li>
 						</li>
 						<li value = "[3]">Laura Biester, Vanita Sharma, Ashkan Kazemi, <u>Naihao Deng</u>, Steven Wilson, Rada Mihalcea
 							<br><b>Analyzing the Effects of Annotator Gender across NLP Tasks</b>
 							<br><i>NLP Perspective Workshop @ LREC 2022</i>
 							<br><a title="Conference" href="https://aclanthology.org/2022.nlperspectives-1.2/">[Workshop]</a>
 							<a title="code/script" href="https://github.com/michigannlp/analyzing-the-effects-of-annotator-gender-across-nlp-tasks">[Code/Script]</a>
+							<a><button class="publication-button" onclick="showBib('bib3')">[BibText]</button></a>
+								<li id="bib3" class="bib-text" style="display: none;">@inproceedings{biester-etal-2022-analyzing,
+	title = "Analyzing the Effects of Annotator Gender across {NLP} Tasks",
+	author = "Biester, Laura  and
+		Sharma, Vanita  and
+		Kazemi, Ashkan  and
+		Deng, Naihao  and
+		Wilson, Steven  and
+		Mihalcea, Rada",
+	booktitle = "Proceedings of the 1st Workshop on Perspectivist Approaches to NLP @LREC2022",
+	month = jun,
+	year = "2022",
+	address = "Marseille, France",
+	publisher = "European Language Resources Association",
+	url = "https://aclanthology.org/2022.nlperspectives-1.2",
+	pages = "10--19",
+}</li>
 						</li>
 						<li value = "[3]">Yulong Chen*, <u>Naihao Deng*</u>, Yang Liu, Yue Zhang
 							<br><b>DialogSum Challenge: Results of the Dialogue Summarization Shared Task</b>
@@ -116,11 +231,35 @@
 							<br><a title="Conference" href="https://aclanthology.org/2022.inlg-genchal.14/">[Conference]</a>
 							<a title="arXiv" href="https://arxiv.org/abs/2208.03898">[arXiv]</a>
 							<a title="video" href="https://www.youtube.com/watch?v=5Bk3tNr_1ng">[Video]</a>
+							<a><button class="publication-button" onclick="showBib('bib2')">[BibText]</button></a>
+								<li id="bib2" class="bib-text" style="display: none;">@inproceedings{chen-etal-2022-dialogsum,
+	title = "{D}ialog{S}um Challenge: Results of the Dialogue Summarization Shared Task",
+	author = "Chen, Yulong  and
+		Deng, Naihao  and
+		Liu, Yang  and
+		Zhang, Yue",
+	booktitle = "Proceedings of the 15th International Conference on Natural Language Generation: Generation Challenges",
+	month = jul,
+	year = "2022",
+	address = "Waterville, Maine, USA and virtual meeting",
+	publisher = "Association for Computational Linguistics",
+	url = "https://aclanthology.org/2022.inlg-genchal.14",
+	pages = "94--103",
+}</li>
 						</li>
 						<li value = "[3]">Naihao Deng, Shuaichen Chang, Peng Shi, Tao Yu, Rui Zhang
 							<br><b>Prefix-to-SQL: Text-to-SQL Generation from Incomplete User Questions</b>
 							<br><i> NLP4Prog @ ACL 2021</i>
 							<br><a title="arXiv" href="https://arxiv.org/abs/2109.13066">[arXiv]</a>
+							<a><button class="publication-button" onclick="showBib('bib1')">[BibText]</button></a>
+								<li id="bib1" class="bib-text" style="display: none;">@misc{deng2021prefixtosql,
+	title={Prefix-to-SQL: Text-to-SQL Generation from Incomplete User Questions}, 
+	author={Naihao Deng and Shuaichen Chang and Peng Shi and Tao Yu and Rui Zhang},
+	year={2021},
+	eprint={2109.13066},
+	archivePrefix={arXiv},
+	primaryClass={cs.CL}
+}</li>
 						</li>
 					</ol>
 				</div>
