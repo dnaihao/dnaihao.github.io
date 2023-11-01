@@ -1114,5 +1114,14 @@
   -ms-transform: translate(0%, -50%)
 }
 
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 45%; /* Adjust as needed */
+  padding: 10px;
+}
 
 /* youtube embedding */
