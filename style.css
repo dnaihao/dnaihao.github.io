@@ -775,30 +775,8 @@
   margin-bottom: 16px;
 }
 
-.markdown-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-}
 
-.markdown-body table th {
-  font-weight: 600;
-}
 
-.markdown-body table td,
-.markdown-body table th {
-  padding: 6px 13px;
-  border: 1px solid #dfe2e5;
-}
-
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
-}
-
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f6f8fa;
-}
 
 .markdown-body img {
   max-width: 100%;
@@ -1123,5 +1101,59 @@
   width: 45%; /* Adjust as needed */
   padding: 10px;
 }
+
+
+.publications-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.publication {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  margin-bottom: 20px; /* Space between each publication */
+}
+
+.venue-column {
+  flex-basis: 20%; /* Adjust the width of the venue column */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 5px;
+  /* border-right: 1px solid #ddd; Separator between columns */
+  height: 100%; /* Make sure it spans the height of the details column */
+  /* background-color: rgba(155, 227, 168, 0.873); Background color for the venue box */
+  padding: 5px 10px; /* Padding inside the box */
+  border-radius: 5px; /* Rounded corners for the box */
+}
+
+.details-column {
+  /* flex-grow: 1; Take the remaining space */
+  padding: 10px;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: left; /* Center content vertically for shorter texts */
+}
+
+.custom-ol {
+  list-style-type: none; /* Removes the default numbering */
+  padding-left: 0; /* Removes the default padding */
+}
+
+
+.table-no-lines, .table-no-lines td, .table-no-lines th {
+  border: none; /* Removes all borders from the table and its cells */
+}
+
+.table-no-lines {
+  width: 100%; /* Adjust table width as needed */
+  border-collapse: collapse; /* Ensures that the borders are collapsed */
+}
+
+.table-no-lines td {
+  vertical-align: middle; /* Aligns content vertically in the middle */
+  padding: 8px; /* Adjust padding as per your preference */
+}
+
 
 /* youtube embedding */
